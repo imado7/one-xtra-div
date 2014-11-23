@@ -17,8 +17,8 @@ html, body {
     color: #fff;
     text-align: center; }
   .main-container .home-container {
-    background-color: #000;
-    z-index: 9999; }
+    z-index: 9999;
+    background: linear-gradient(to bottom, black 0%, black 90%, black 10%, white 10%, white 100%); }
   .main-container .portfolio-container {
     background-color: #ff0;
     z-index: 999; }

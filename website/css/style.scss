@@ -23,8 +23,8 @@ html, body {
 	}
 	
 	.home-container {
-		background-color: #000;
 		z-index: 9999;
+		background: linear-gradient(to bottom, #000 0%,#000 90%,#000000 10%,#fff 10%,#fff 100%);
 	}
 	.portfolio-container {
 		background-color: #ff0;

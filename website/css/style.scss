@@ -1,6 +1,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800);
 
+@import url(awesomecss/font-awesome.css);
+
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model; // Safari <= 5
      -moz-box-sizing: $box-model; // Firefox <= 19
@@ -26,6 +28,34 @@
   transform: translateY(-50%);
 }
 
+@mixin vertical-align-logo {
+  position: relative;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-social {
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+a,
+a:active,
+a:hover,
+button {
+  outline: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
 
 html, body {
 	margin: 0;
@@ -38,13 +68,13 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	text-align: center;
 		
 	.home-container, .portfolio-container {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		color: #fff;
-		text-align: center;
 	}
 	
 	.home-container {
@@ -53,7 +83,8 @@ html, body {
 		overflow: hidden;
 	}
 	.portfolio-container {
-		background-color: #ff0;
+		background-color: #fff;
+		color: #000;
 		z-index: 999;
 	}
 
@@ -62,25 +93,46 @@ html, body {
 .home-container {
 	.logo {
 		width: 100%;
-		height: 92%;
+		height: 93%;
 		float: left;
 		text-align: center;
 		text-transform: uppercase;
 	}
 	.scroll-div {
 		width: 100%;
-		height: 8%;
+		height: 7%;
 		float: left;
-		background-color: #000;
+		background-color: #fff;
+		position: relative;
+		
+			
+			button.scroll-down {
+				@include vertical-align;
+				border: none;
+				background-color: transparent;
+				
+				display: inline-block;
+				font: normal 14px/1 FontAwesome;
+				font-size: 2em;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				cursor: pointer;
+				
+					&:before {
+						content: '\f0d7';
+					}
+			}
 	}
+	
 }
+
 
 .logo-circle {
     width: 200px;
     height: 200px;
     background: #fff;
 	@include border-radius(50%);
-	@include vertical-align;
+	@include vertical-align-logo;
 	margin: auto;
 	position: relative;
 		
@@ -98,5 +150,70 @@ html, body {
 .p-intro {
 	letter-spacing: 0.5em;
 	word-spacing: 0.5em;
-	@include vertical-align;
+	line-height: 2em;
+	@include vertical-align-logo;
 }
+
+.social-links {
+	width: 100%;
+	float: left;
+	@include vertical-align-social;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline-block;
+			@include border-radius(50px);
+			background-color: #fff;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+			margin: 0 2%;
+			
+				.fa {
+					font-size: 1.5em;
+					@include vertical-align;
+					color: #000;
+				}
+		}
+	}
+}
+
+
+	
+
+
+.portfolio-container {
+
+	.scroll-back {
+		width: 100%;
+		height: 7%;
+		float: left;
+		background-color: #fff;
+		position: fixed;
+		bottom: 0;
+		
+			
+			button.home-btn {
+				@include vertical-align;
+				border: none;
+				background-color: transparent;
+				
+				display: inline-block;
+				font: normal 14px/1 FontAwesome;
+				font-size: 2em;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				cursor: pointer;
+				
+					&:before {
+						content: '\f0d8';
+					}
+			}
+	}
+	
+
+}
+
+

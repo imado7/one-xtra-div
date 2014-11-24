@@ -19,11 +19,21 @@
             	<div class="logo-circle">
                 	<h1>One Xtra Div</h1>
                 </div>
-                <p class="p-intro">my web development portfolio</p>
+                <p class="p-intro">online portfolio</p>
+                <div class="social-links">
+                    <ul>
+                        <li class="i-linkedin"><i class="fa fa-linkedin"></i></li>
+                        <li class="i-google-plus"><i class="fa fa-google-plus"></i></li>
+                        <li class="i-twitter"><i class="fa fa-twitter"></i></li>
+                    </ul>
+            	</div>
             </div>
             <div class="scroll-div"></div>
         </div>
-        <div class="portfolio-container">portfolio</div>
+        
+        <div class="portfolio-container">
+        	<div class="scroll-back"></div>
+        </div>
         
     </div>
 	    
@@ -37,31 +47,35 @@
 		// window load
 		$(window).load(function() {
 			$('.home-container, .portfolio-container').css('display', 'none');
+			
 			$('.home-container').slideDown({
 				'duration': 1500,
 				'easing': 'swing'
 			});
+			
 			$('.scroll-div').css({
 				'position': 'absolute',
-				'bottom': '-8%' 
+				'bottom': '-7%' 
 			});
 			
-			$('.logo-circle, .p-intro').css('opacity', '0');
+			$('.logo-circle, .p-intro, .social-links').css('opacity', '0');
 			
-			$('.logo-circle, .p-intro').delay(3500).animate({
+			$('.logo-circle, .p-intro, .social-links').delay(3500).animate({
 				'opacity': 1
 			}, 1500);
 			
-			$('.scroll-div').delay(2500).animate({
+			$('.scroll-div').delay(2000).animate({
 				'bottom': '0',
 				'easing': 'swing'
 			}, 1000, function() {
-				$('.scroll-div').append('<button class=scroll-down>click me</button>');
+				$('.scroll-div').append('<button class=scroll-down></button>');
 				
+				/*
 				$('.scroll-down').css({
 					'position': 'absolute',
 					'bottom': '20px'
 				});
+				*/
 				
 				$('.scroll-down').click(function(){
 					$('.home-container').slideUp({
@@ -70,6 +84,7 @@
 					});
 					$('.portfolio-container').fadeIn(1500);
 				});
+				
 			});
 			
 		});
@@ -79,11 +94,13 @@
     	$(document).ready(function() {
 			
 			/* portfolio container */
-			$('.portfolio-container').append('<button class=home-btn>home</button>');
+			$('.scroll-back').append('<button class=home-btn></button>');
+			/*
 			$('.home-btn').css({
 				'position': 'fixed',
 				'top': '20px'
 			});
+			*/
 			
 			$('.home-btn').click(function(){
 				$('.home-container').slideDown({
@@ -114,6 +131,16 @@
         		}
 			});
 			/* end mouseWhell */
+			
+			$('.i-linkedin').click(function() {
+				window.open('https://www.linkedin.com/pub/imad-el-maoed/50/a5a/461');
+			});
+			$('.i-google-plus').click(function() {
+				window.open('https://plus.google.com/u/0/116118041050107647524/posts');
+			});
+			$('.i-twitter').click(function() {
+				window.open('https://twitter.com/imad_el_maoed');
+			});
             
         });
 		// end document ready

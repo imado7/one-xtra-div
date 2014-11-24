@@ -1,10 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800);
+@import url(awesomecss/font-awesome.css);
 *,
 *:after,
 *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+a,
+a:active,
+a:hover,
+button {
+  outline: 0; }
+
+ul,
+ol,
+li {
+  list-style: none; }
 
 html, body {
   margin: 0;
@@ -15,32 +27,50 @@ html, body {
 .main-container {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .main-container .home-container, .main-container .portfolio-container {
     width: 100%;
     height: 100%;
     position: absolute;
-    color: #fff;
-    text-align: center; }
+    color: #fff; }
   .main-container .home-container {
     background: #000;
     z-index: 9999;
     overflow: hidden; }
   .main-container .portfolio-container {
-    background-color: #ff0;
+    background-color: #fff;
+    color: #000;
     z-index: 999; }
 
 .home-container .logo {
   width: 100%;
-  height: 92%;
+  height: 93%;
   float: left;
   text-align: center;
   text-transform: uppercase; }
 .home-container .scroll-div {
   width: 100%;
-  height: 8%;
+  height: 7%;
   float: left;
-  background-color: #000; }
+  background-color: #fff;
+  position: relative; }
+  .home-container .scroll-div button.scroll-down {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    font: normal 14px/1 FontAwesome;
+    font-size: 2em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer; }
+    .home-container .scroll-div button.scroll-down:before {
+      content: '\f0d7'; }
 
 .logo-circle {
   width: 200px;
@@ -50,7 +80,7 @@ html, body {
   border-radius: 50%;
   background-clip: padding-box;
   position: relative;
-  top: 50%;
+  top: 30%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -72,8 +102,63 @@ html, body {
 .p-intro {
   letter-spacing: 0.5em;
   word-spacing: 0.5em;
+  line-height: 2em;
   position: relative;
-  top: 50%;
+  top: 30%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.social-links {
+  width: 100%;
+  float: left;
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .social-links ul {
+    padding: 0;
+    margin: 0; }
+    .social-links ul li {
+      display: inline-block;
+      -webkit-border-radius: 50px;
+      border-radius: 50px;
+      background-clip: padding-box;
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin: 0 2%; }
+      .social-links ul li .fa {
+        font-size: 1.5em;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: #000; }
+
+.portfolio-container .scroll-back {
+  width: 100%;
+  height: 7%;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0; }
+  .portfolio-container .scroll-back button.home-btn {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    font: normal 14px/1 FontAwesome;
+    font-size: 2em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer; }
+    .portfolio-container .scroll-back button.home-btn:before {
+      content: '\f0d8'; }

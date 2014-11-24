@@ -44,6 +44,11 @@
   transform: translateY(-50%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a,
 a:active,
 a:hover,
@@ -58,8 +63,6 @@ li {
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -214,6 +217,28 @@ html, body {
 	}
 	
 
+}
+
+.works {
+	width: 100%;
+	margin: auto;
+		
+		dl {
+			margin: 0;
+			padding: 0;
+				
+				dt, dd {
+					margin: 0;
+					padding: 0;
+				}
+				
+				dt {
+					cursor: pointer;
+					font-weight: 700;
+					border-bottom: 1px solid #000;
+					padding: 10px 0;
+				}
+		}
 }
 
 

@@ -26,6 +26,9 @@ html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif; }
 
+body {
+  display: none; }
+
 .main-container {
   width: 100%;
   height: 100%;
@@ -111,25 +114,44 @@ html, body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.intro {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 40%;
+  line-height: 1.5em;
+  font-size: 120%; }
+  .intro img {
+    width: 22%;
+    height: auto;
+    margin-bottom: 3%; }
+  .intro strong {
+    font-size: 140%;
+    text-transform: uppercase;
+    padding-bottom: 2%;
+    display: block; }
+  .intro p {
+    padding-bottom: 2%; }
+
 .social-links {
   width: 100%;
   float: left;
-  position: relative;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  margin-top: 3%; }
   .social-links ul {
     padding: 0;
     margin: 0; }
     .social-links ul li {
       display: inline-block;
-      -webkit-border-radius: 50px;
-      border-radius: 50px;
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
       background-clip: padding-box;
-      background-color: #fff;
-      width: 50px;
-      height: 50px;
+      background-color: #000;
+      width: 80px;
+      height: 80px;
       cursor: pointer;
       margin: 0 2%; }
       .social-links ul li .fa {
@@ -139,7 +161,7 @@ html, body {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        color: #000; }
+        color: #fff; }
 
 .portfolio-container .scroll-back {
   width: 100%;
@@ -164,10 +186,13 @@ html, body {
     cursor: pointer; }
     .portfolio-container .scroll-back button.home-btn:before {
       content: '\f0d8'; }
+.portfolio-container object {
+  width: 100%;
+  height: 100%; }
 
 .works {
   width: 100%;
-  margin: auto; }
+  height: 90%; }
   .works dl {
     margin: 0;
     padding: 0; }

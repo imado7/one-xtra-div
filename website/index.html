@@ -27,10 +27,10 @@
         
         <div class="portfolio-container">
         	<div class="intro">
-            	<img src="images/imad.png">
+            	<img src="images/Imad-el-maoed.png">
             	<strong>Imad El Maoed</strong>
-                <p>Web Developer Freelancer, with Excellent skills in: HTML5 - CSS Preprocessor - less &amp; sass - compass - jQuery - jQuery Mobile - bootstrap - boilerplate - Git - Wordpress - Photoshop - Illustrator - Email responsive newsletter.</p>
-                <a href="#modal" class="open-mouse">Click Here</a>
+                <p>Frontend Web Developer, with Excellent skills in: HTML5 - CSS Preprocessor - less &amp; sass - compass - jQuery - jQuery Mobile - bootstrap - Git - Wordpress - Photoshop - Illustrator - Email responsive newsletter.</p>
+                <a href="#modal" class="open-mouse">My Works</a>
 
                 <div class="social-links">
                     <ul>
@@ -46,12 +46,12 @@
              <div id="modal">
 		<div class="modal-content">
 			<div class="header">
-				<h2>Modal Heading</h2>
+				<a href="#" class="close-modal">x</a>
 			</div>
 			<div id="works-content">
 			</div>
 			<div class="cf footer">
-				<a href="#" class="close-modal">Close</a>
+				<a href="#" class="close-modal">x</a>
 			</div>
 		</div>
 		<div class="overlay"></div>
@@ -69,6 +69,7 @@
     
     <script src="js/vendor/jquery.easing.1.3.js"></script>
 
+
     
     <script>
 	
@@ -85,7 +86,7 @@
 			
 			$('.scroll-div').css({
 				'position': 'absolute',
-				'bottom': '-7%' 
+				'bottom': '-5%' 
 			});
 			
 			$('.logo-circle, .p-intro, .social-links').css('opacity', '0');
@@ -161,12 +162,15 @@
         		}
 				
 			});
+			
+
+			
 
 			
 
 			$('a.open-mouse').click(function(){
 				$('.main-container').unbind("mousewheel");
-				$('#works-content').html('<object data="works.html"/>');
+				$('#works-content').html('<object data="works.html" />');
 			});
 			
 			
@@ -192,6 +196,22 @@
 				});
 			});
 
+$('#works-content').bind('mousewheel DOMMouseScroll', function(e) {
+    var scrollTo = null;
+
+    if (e.type == 'mousewheel') {
+        scrollTo = (e.originalEvent.wheelDelta * -1);
+    }
+    else if (e.type == 'DOMMouseScroll') {
+        scrollTo = 40 * e.originalEvent.detail;
+    }
+
+    if (scrollTo) {
+        e.preventDefault();
+        $(this).scrollTop(scrollTo + $(this).scrollTop());
+    }
+});
+
 			
 			/* end mouseWhell */
 
@@ -210,6 +230,11 @@
             
         //});
 		// end document ready
+		
+
+
+
+
 		
 		});
 		// end window load

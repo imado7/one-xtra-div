@@ -1,4 +1,7 @@
+/*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800);
+*/
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
 @import url(awesomecss/font-awesome.css);
 *,
 *:after,
@@ -15,7 +18,8 @@ a,
 a:active,
 a:hover,
 button {
-  outline: 0; }
+  outline: 0;
+  text-decoration: none; }
 
 ul,
 ol,
@@ -24,7 +28,7 @@ li {
 
 html, body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Muli', sans-serif; }
 
 body {
   display: none; }
@@ -50,15 +54,15 @@ body {
 
 .home-container .logo {
   width: 100%;
-  height: 93%;
+  height: 95%;
   float: left;
   text-align: center;
   text-transform: uppercase; }
 .home-container .scroll-div {
   width: 100%;
-  height: 7%;
+  height: 5%;
   float: left;
-  background-color: #fff;
+  background-color: #000;
   position: relative; }
   .home-container .scroll-div button.scroll-down {
     position: relative;
@@ -73,9 +77,10 @@ body {
     font-size: 2em;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #fff; }
     .home-container .scroll-div button.scroll-down:before {
-      content: '\f0d7'; }
+      content: '\f107'; }
 
 .logo-circle {
   width: 200px;
@@ -124,23 +129,24 @@ body {
   transform: translateY(-50%);
   top: 40%;
   line-height: 1.5em;
-  font-size: 120%; }
+  font-size: 110%;
+  font-weight: 300; }
   .intro img {
-    width: 22%;
+    width: 20%;
     height: auto;
     margin-bottom: 3%; }
   .intro strong {
-    font-size: 140%;
-    text-transform: uppercase;
+    font-size: 120%;
+    font-weight: 300;
     padding-bottom: 2%;
     display: block; }
   .intro p {
-    padding-bottom: 2%; }
+    padding-bottom: 3%; }
 
 .social-links {
   width: 100%;
   float: left;
-  margin-top: 3%; }
+  margin-top: 5%; }
   .social-links ul {
     padding: 0;
     margin: 0; }
@@ -150,10 +156,12 @@ body {
       border-radius: 100px;
       background-clip: padding-box;
       background-color: #000;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       cursor: pointer;
       margin: 0 2%; }
+      .social-links ul li:hover {
+        background-color: #cacaca; }
       .social-links ul li .fa {
         font-size: 1.5em;
         position: relative;
@@ -165,9 +173,9 @@ body {
 
 .portfolio-container .scroll-back {
   width: 100%;
-  height: 7%;
+  height: 5%;
   float: left;
-  background-color: #fff;
+  background-color: #000;
   position: fixed;
   bottom: 0; }
   .portfolio-container .scroll-back button.home-btn {
@@ -183,24 +191,48 @@ body {
     font-size: 2em;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #fff; }
     .portfolio-container .scroll-back button.home-btn:before {
-      content: '\f0d8'; }
+      content: '\f106'; }
 .portfolio-container object {
   width: 100%;
   height: 100%; }
+.portfolio-container .close-modal {
+  font-size: 5em;
+  font-weight: 300;
+  color: #cacaca;
+  line-height: 0.7em; }
+.portfolio-container .open-mouse {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #000;
+  border: 1px solid #000;
+  padding: 3px 30px; }
+  .portfolio-container .open-mouse:hover {
+    border: 1px solid #000;
+    color: #666; }
 
+/*
 .works {
-  width: 100%;
-  height: 90%; }
-  .works dl {
-    margin: 0;
-    padding: 0; }
-    .works dl dt, .works dl dd {
-      margin: 0;
-      padding: 0; }
-    .works dl dt {
-      cursor: pointer;
-      font-weight: 700;
-      border-bottom: 1px solid #000;
-      padding: 10px 0; }
+	width: 100%;
+	height: 90%;
+		
+		dl {
+			margin: 0;
+			padding: 0;
+				
+				dt, dd {
+					margin: 0;
+					padding: 0;
+				}
+				
+				dt {
+					cursor: pointer;
+					font-weight: 400;
+					border-bottom: 1px solid #000;
+					padding: 10px 0;
+				}
+		}
+}
+*/

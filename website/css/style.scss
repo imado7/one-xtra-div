@@ -1,5 +1,8 @@
-
+/*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800);
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
 
 @import url(awesomecss/font-awesome.css);
 
@@ -54,6 +57,7 @@ a:active,
 a:hover,
 button {
   outline: 0;
+  text-decoration: none;
 }
 
 ul,
@@ -64,7 +68,7 @@ li {
 
 html, body {
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 body {
 	display: none;
@@ -99,16 +103,16 @@ body {
 .home-container {
 	.logo {
 		width: 100%;
-		height: 93%;
+		height: 95%;
 		float: left;
 		text-align: center;
 		text-transform: uppercase;
 	}
 	.scroll-div {
 		width: 100%;
-		height: 7%;
+		height: 5%;
 		float: left;
-		background-color: #fff;
+		background-color: #000;
 		position: relative;
 		
 			
@@ -123,9 +127,10 @@ body {
 				text-rendering: auto;
 				-webkit-font-smoothing: antialiased;
 				cursor: pointer;
+				color: #fff;
 				
 					&:before {
-						content: '\f0d7';
+						content: '\f107';
 					}
 			}
 	}
@@ -166,29 +171,30 @@ body {
 	@include vertical-align;
 	top: 40%;
 	line-height: 1.5em;
-	font-size: 120%;
+	font-size: 110%;
+	font-weight: 300;
 		
 		img {
-			width: 22%;
+			width: 20%;
 			height: auto;
 			margin-bottom: 3%;
 		}
 		
 		strong {
-			font-size: 140%;
-			text-transform: uppercase;
+			font-size: 120%;
+			font-weight: 300;
 			padding-bottom: 2%;
 			display: block;
 		}
 		p {
-			padding-bottom: 2%;
+			padding-bottom: 3%;
 		}
 }
 
 .social-links {
 	width: 100%;
 	float: left;
-	margin-top: 3%;
+	margin-top: 5%;
 	
 	ul {
 		padding: 0;
@@ -197,10 +203,14 @@ body {
 			display: inline-block;
 			@include border-radius(100px);
 			background-color: #000;
-			width: 80px;
-			height: 80px;
+			width: 70px;
+			height: 70px;
 			cursor: pointer;
 			margin: 0 2%;
+				
+				&:hover {
+					background-color: #cacaca;
+				}
 			
 				.fa {
 					font-size: 1.5em;
@@ -219,9 +229,9 @@ body {
 
 	.scroll-back {
 		width: 100%;
-		height: 7%;
+		height: 5%;
 		float: left;
-		background-color: #fff;
+		background-color: #000;
 		position: fixed;
 		bottom: 0;
 		
@@ -237,9 +247,10 @@ body {
 				text-rendering: auto;
 				-webkit-font-smoothing: antialiased;
 				cursor: pointer;
+				color: #fff;
 				
 					&:before {
-						content: '\f0d8';
+						content: '\f106';
 					}
 			}
 	}
@@ -249,9 +260,28 @@ body {
 		height: 100%;
 	}
 	
+	.close-modal {
+		font-size: 5em;
+		font-weight: 300;
+		color: #cacaca;
+		line-height: 0.7em;
+	}
+	.open-mouse {
+		font-size: 0.9em;
+		font-weight: 400;
+		color: #000;
+		border: 1px solid #000;
+		padding: 3px 30px;
+			
+			&:hover {
+				border: 1px solid #000;
+				color: #666;
+			}
+	}
+	
 
 }
-
+/*
 .works {
 	width: 100%;
 	height: 90%;
@@ -267,11 +297,11 @@ body {
 				
 				dt {
 					cursor: pointer;
-					font-weight: 700;
+					font-weight: 400;
 					border-bottom: 1px solid #000;
 					padding: 10px 0;
 				}
 		}
 }
-
+*/
 

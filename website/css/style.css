@@ -44,80 +44,70 @@ body {
     position: absolute;
     color: #fff; }
   .main-container .home-container {
-    background: #000;
-    z-index: 9999;
+    height: 94%;
+    width: 97%;
+    top: 3%;
+    left: 1.5%;
+    background-color: #000;
+    z-index: 20;
     overflow: hidden; }
   .main-container .portfolio-container {
     background-color: #fff;
     color: #000;
-    z-index: 999; }
+    z-index: 10; }
 
 .home-container .logo {
   width: 100%;
-  height: 95%;
   float: left;
   text-align: center;
-  text-transform: uppercase; }
-.home-container .scroll-div {
-  width: 100%;
-  height: 5%;
-  float: left;
-  background-color: #000;
-  position: relative; }
-  .home-container .scroll-div button.scroll-down {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border: none;
-    background-color: transparent;
-    display: inline-block;
-    font: normal 14px/1 FontAwesome;
-    font-size: 2em;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
-    color: #fff; }
-    .home-container .scroll-div button.scroll-down:before {
-      content: '\f107'; }
-
-.logo-circle {
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-clip: padding-box;
+  text-transform: uppercase;
   position: relative;
-  top: 30%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin: auto;
-  position: relative; }
-  .logo-circle h1 {
-    position: absolute;
-    color: #000;
-    font-weight: 300;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
-    font-size: 2.5em;
-    line-height: 1em; }
-
-.p-intro {
-  letter-spacing: 0.5em;
-  word-spacing: 0.5em;
-  line-height: 2em;
-  position: relative;
-  top: 30%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+  .home-container .logo .logo-circle {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    margin: auto;
+    position: relative; }
+    .home-container .logo .logo-circle h1 {
+      position: absolute;
+      color: #000;
+      font-weight: 300;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 0 50px;
+      font-size: 2.5em;
+      line-height: 1em; }
+  .home-container .logo .p-intro {
+    letter-spacing: 0.5em;
+    word-spacing: 0.5em;
+    line-height: 2em;
+    margin-top: 6%; }
+  .home-container .logo .scroll-div {
+    width: 100%;
+    float: left;
+    margin-top: 4%; }
+    .home-container .logo .scroll-div button.scroll-down {
+      border: none;
+      background-color: transparent;
+      display: inline-block;
+      font: normal 14px/1 FontAwesome;
+      font-size: 2em;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+      color: #fff; }
+      .home-container .logo .scroll-div button.scroll-down:before {
+        content: '\f107'; }
 
 .intro {
   width: 70%;
@@ -161,7 +151,7 @@ body {
       cursor: pointer;
       margin: 0 2%; }
       .social-links ul li:hover {
-        background-color: #cacaca; }
+        background-color: #333; }
       .social-links ul li .fa {
         font-size: 1.5em;
         position: relative;
@@ -173,11 +163,8 @@ body {
 
 .portfolio-container .scroll-back {
   width: 100%;
-  height: 5%;
   float: left;
-  background-color: #000;
-  position: fixed;
-  bottom: 0; }
+  margin-top: 5%; }
   .portfolio-container .scroll-back button.home-btn {
     position: relative;
     top: 50%;
@@ -192,7 +179,7 @@ body {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
-    color: #fff; }
+    color: #000; }
     .portfolio-container .scroll-back button.home-btn:before {
       content: '\f106'; }
 .portfolio-container object {
@@ -201,7 +188,7 @@ body {
 .portfolio-container .close-modal {
   font-size: 5em;
   font-weight: 300;
-  color: #cacaca;
+  color: #fff;
   line-height: 0.7em; }
 .portfolio-container .open-mouse {
   font-size: 0.9em;
@@ -213,26 +200,33 @@ body {
     border: 1px solid #000;
     color: #666; }
 
-/*
 .works {
-	width: 100%;
-	height: 90%;
-		
-		dl {
-			margin: 0;
-			padding: 0;
-				
-				dt, dd {
-					margin: 0;
-					padding: 0;
-				}
-				
-				dt {
-					cursor: pointer;
-					font-weight: 400;
-					border-bottom: 1px solid #000;
-					padding: 10px 0;
-				}
-		}
-}
-*/
+  width: 100%;
+  float: left; }
+  .works ul {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .works ul li {
+      border-bottom: 1px solid #e7e7e7;
+      padding: 35px 0;
+      margin: 0;
+      font-size: 110%; }
+      .works ul lili:last-child {
+        border-bottom: none; }
+      .works ul li p {
+        padding: 10px 0 0;
+        margin: 0; }
+      .works ul li a {
+        display: block;
+        padding: 5px 0 10px;
+        color: #000; }
+        .works ul li a:hover {
+          color: #999; }
+      .works ul li strong {
+        padding: 35px 0 5px 0;
+        margin: 0;
+        font-size: 140%;
+        font-weight: 300; }

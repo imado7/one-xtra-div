@@ -79,6 +79,7 @@ $(window).load(function() {
 	
 	
 	// allow mousewheel on ,odal window projects
+	/*
 	$('#works-content').bind('mousewheel DOMMouseScroll', function(e) {
     	var scrollTo = null;
 
@@ -94,10 +95,11 @@ $(window).load(function() {
         	$(this).scrollTop(scrollTo + $(this).scrollTop());
     	}
 	});
+	*/
 
 	
 	// when close window modal return to mousewheel event
-	$('a.modal-close').click(function(){
+	$('a.m-close').click(function(){
 		$('.main-container').bind('mousewheel', function(e){
 			if(e.originalEvent.wheelDelta > 0)
 			{
